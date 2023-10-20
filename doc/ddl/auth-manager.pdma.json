@@ -4,11 +4,11 @@
   "avatar": "",
   "version": "4.6.3",
   "createdTime": "2023-5-15 13:40:02",
-  "updatedTime": "2023-10-20 11:30:09",
+  "updatedTime": "2023-10-20 15:47:18",
   "dbConns": [],
   "profile": {
     "default": {
-      "db": "29D1CE08-4C35-4D2D-AAA9-23D93305B52E",
+      "db": "DFBEC1DD-AA84-456E-BBF3-C95DD0DB2022",
       "dbConn": "D4843C6A-F7EC-480D-A8DB-4F6655F65F92",
       "entityInitFields": [
         {
@@ -588,7 +588,7 @@
           "defKey": "id",
           "defName": "主键ID",
           "comment": "主键ID",
-          "type": "",
+          "type": "bigint",
           "len": "",
           "scale": "",
           "primaryKey": true,
@@ -601,18 +601,18 @@
             "tinyint": "短数字类型",
             "bigint unsigned": "长整形"
           },
-          "domain": "9D59FF94-8618-4744-9B1A-07E147A7BEA5",
+          "domain": "",
           "id": "76697B07-D7DC-408D-8529-40ABE3209196"
         },
         {
           "defKey": "user_id",
           "defName": "用户ID",
           "comment": "用户ID",
-          "type": "",
+          "type": "bigint",
           "len": "",
           "scale": "",
           "primaryKey": false,
-          "notNull": true,
+          "notNull": false,
           "autoIncrement": false,
           "defaultValue": "",
           "hideInGraph": false,
@@ -621,7 +621,7 @@
             "tinyint": "短数字类型",
             "bigint unsigned": "长整形"
           },
-          "domain": "9D59FF94-8618-4744-9B1A-07E147A7BEA5",
+          "domain": "",
           "id": "10B523DA-9BB2-40F0-BF82-BDD373E3F9D1"
         },
         {
@@ -709,7 +709,7 @@
           "defName": "电话号码",
           "comment": "电话号码",
           "type": "VARCHAR",
-          "len": 13,
+          "len": 15,
           "scale": "",
           "primaryKey": false,
           "notNull": false,
@@ -765,10 +765,10 @@
           "id": "B6335E81-7491-405B-A311-F4B6C227C2D9"
         },
         {
-          "defKey": "status",
+          "defKey": "user_status",
           "defName": "账号状态",
           "comment": "(0正常,1停用)",
-          "type": "INT",
+          "type": "INTEGER",
           "len": "",
           "scale": "",
           "primaryKey": false,
@@ -788,7 +788,7 @@
           "defKey": "del_flag",
           "defName": "删除标识",
           "comment": "(0未删除,1删除)",
-          "type": "INT",
+          "type": "INTEGER",
           "len": "",
           "scale": "",
           "primaryKey": false,
@@ -1099,7 +1099,7 @@
           "id": "AC4286E6-3C8D-4A2E-9F78-CBA8E9B240C4"
         },
         {
-          "defKey": "status",
+          "defKey": "login_status",
           "defName": "登录状态",
           "comment": "0成功,1失败",
           "type": "",
@@ -1348,7 +1348,7 @@
           "id": "C09228F7-592D-4A3C-A72E-57C71A8A5771"
         },
         {
-          "defKey": "status",
+          "defKey": "role_status",
           "defName": "角色状态",
           "comment": "0正常,1停用",
           "type": "",
@@ -1702,10 +1702,10 @@
           "id": "A46178AC-3E01-49E4-A644-74C542D291B5"
         },
         {
-          "defKey": "status",
+          "defKey": "dept_status",
           "defName": "部门状态",
           "comment": "0正常,1停用",
-          "type": "INT",
+          "type": "INTEGER",
           "len": "",
           "scale": "",
           "primaryKey": false,
@@ -1725,7 +1725,7 @@
           "defKey": "del_flag",
           "defName": "删除标识",
           "comment": "0未删除,1删除",
-          "type": "INT",
+          "type": "INTEGER",
           "len": "",
           "scale": "",
           "primaryKey": false,
@@ -2136,7 +2136,7 @@
           "id": "589B8E34-561D-4C80-99BD-A9AFCB70D76A"
         },
         {
-          "defKey": "status",
+          "defKey": "menu_status",
           "defName": "菜单状态",
           "comment": "(0正常 1停用)",
           "type": "",
@@ -2494,7 +2494,7 @@
           "defName": "字典类型",
           "comment": "",
           "type": "VARCHAR",
-          "len": 100,
+          "len": 120,
           "scale": "",
           "primaryKey": false,
           "notNull": false,
@@ -2511,8 +2511,8 @@
         },
         {
           "defKey": "dict_type_status",
-          "defName": "状态(0正常 1停用)",
-          "comment": "",
+          "defName": "状态",
+          "comment": "(0正常 1停用)",
           "type": "",
           "len": "",
           "scale": "",
@@ -3218,6 +3218,26 @@
           "id": "A87B832B-609D-4CEE-8690-A414695E3B42"
         },
         {
+          "defKey": "trace_id",
+          "defName": "追踪ID",
+          "comment": "",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {
+            "tinyint": "短数字类型",
+            "bigint unsigned": "长整形"
+          },
+          "domain": "9092C4E0-1A54-4859-ABBB-5B62DBC27573",
+          "id": "B7C75E70-8A4E-4515-ADDE-A11CD3C76224"
+        },
+        {
           "defKey": "oper_url",
           "defName": "请求URL",
           "comment": "",
@@ -3319,7 +3339,7 @@
         },
         {
           "defKey": "oper_result",
-          "defName": "返回参数(json)",
+          "defName": "返回参数(Json)",
           "comment": "",
           "type": "VARCHAR",
           "len": 2000,
@@ -4649,7 +4669,7 @@
           "id": "11ECC717-27C5-48A4-8B78-A71A02AAFD68"
         },
         {
-          "defKey": "status",
+          "defKey": "notice_status",
           "defName": "公告状态（0正常 1关闭）",
           "comment": "",
           "type": "",
@@ -4672,7 +4692,7 @@
           "defKey": "del_flag",
           "defName": "删除标识",
           "comment": "1为删除,0为未删除",
-          "type": "INT",
+          "type": "INTEGER",
           "len": "",
           "scale": "",
           "primaryKey": false,
@@ -5977,13 +5997,13 @@
   "dbConn": [
     {
       "defKey": "D4843C6A-F7EC-480D-A8DB-4F6655F65F92",
-      "defName": "local-mysql",
-      "type": "29D1CE08-4C35-4D2D-AAA9-23D93305B52E",
+      "defName": "local-postgrel",
+      "type": "DFBEC1DD-AA84-456E-BBF3-C95DD0DB2022",
       "properties": {
-        "driver_class_name": "com.mysql.cj.jdbc.Driver",
-        "url": "jdbc:mysql://127.0.0.1: 3306/are?characterEncoding=UTF-8&useSSL=false&useUnicode=true&serverTimezone=UTC",
-        "password": "fmx2022",
-        "username": "root"
+        "driver_class_name": "org.postgresql.Driver",
+        "url": "jdbc:postgresql://localhost:5432/meta_lite",
+        "password": "root",
+        "username": "postgres"
       }
     }
   ]
