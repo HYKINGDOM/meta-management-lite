@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.java.au</groupId>
+        <groupId>com.java.meta</groupId>
         <artifactId>meta-management-lite</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
@@ -20,7 +20,7 @@
         <!-- Sa-Token 权限认证（Reactor响应式集成） -->
         <dependency>
             <groupId>cn.dev33</groupId>
-            <artifactId>sa-token-reactor-spring-boot-starter</artifactId>
+            <artifactId>sa-token-spring-boot3-starter</artifactId>
         </dependency>
 
         <dependency>

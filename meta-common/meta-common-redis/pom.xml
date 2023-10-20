@@ -4,14 +4,15 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.java.meta</groupId>
-        <artifactId>meta-management-lite</artifactId>
+        <artifactId>meta-common</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>meta-auth-center</artifactId>
+    <groupId>com.java.auth.common.redis</groupId>
+    <artifactId>meta-common-redis</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>meta-center</name>
-    <description>meta-center</description>
+    <name>meta-common-redis</name>
+    <description>meta-common-redis</description>
 
     <properties>
         <java.version>${java.version}</java.version>
@@ -20,18 +21,9 @@
     <dependencies>
 
         <dependency>
-            <groupId>cn.dev33</groupId>
-            <artifactId>sa-token-spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>cn.dev33</groupId>
-            <artifactId>sa-token-oauth2</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
 
         <dependency>

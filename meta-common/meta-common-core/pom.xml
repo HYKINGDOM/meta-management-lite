@@ -4,42 +4,24 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.java.meta</groupId>
-        <artifactId>meta-management-lite</artifactId>
+        <artifactId>meta-common</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-
-    <artifactId>meta-auth-center</artifactId>
+    <groupId>com.java.auth.common.core</groupId>
+    <artifactId>meta-common-core</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>meta-center</name>
-    <description>meta-center</description>
-
+    <name>meta-common-core</name>
+    <description>meta-common-core</description>
     <properties>
         <java.version>${java.version}</java.version>
     </properties>
-
     <dependencies>
-
-        <dependency>
-            <groupId>cn.dev33</groupId>
-            <artifactId>sa-token-spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>cn.dev33</groupId>
-            <artifactId>sa-token-oauth2</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -47,14 +29,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
             </plugin>
         </plugins>
     </build>

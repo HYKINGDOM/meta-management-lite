@@ -1,30 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>com.java.au</groupId>
-        <artifactId>meta-management-lite</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
-
-    <artifactId>meta-common</artifactId>
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.java.meta</groupId>
+    <artifactId>meta-management-lite</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
+  </parent>
 
-    <properties>
-        <java.version>${java.version}</java.version>
-    </properties>
+  <artifactId>meta-common</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
 
-    <modules>
-        <module>auth-common-log-trace</module>
-        <module>auth-common-core</module>
-        <module>auth-common-kafka</module>
-        <module>auth-common-redis</module>
-        <module>auth-common-security</module>
-        <module>auth-common-swagger</module>
-    </modules>
+  <properties>
+    <java.version>${java.version}</java.version>
+  </properties>
+
+  <modules>
+    <module>meta-common-core</module>
+    <module>meta-common-kafka</module>
+    <module>meta-common-redis</module>
+    <module>meta-common-security</module>
+    <module>meta-component-monitor</module>
+    <module>meta-component-file</module>
+    <module>meta-component-log-manager</module>
+    <module>meta-component-message</module>
+    <module>meta-component-sse</module>
+  </modules>
 
 
 </project>
