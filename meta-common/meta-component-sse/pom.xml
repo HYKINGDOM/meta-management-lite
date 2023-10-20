@@ -7,7 +7,7 @@
         <artifactId>meta-common</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.java.auth.component.sse</groupId>
+    <groupId>com.java.meta.component.sse</groupId>
     <artifactId>meta-component-sse</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>meta-component-sse</name>

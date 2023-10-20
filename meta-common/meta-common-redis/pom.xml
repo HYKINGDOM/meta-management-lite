@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.java.auth.common.redis</groupId>
+    <groupId>com.java.meta.common.redis</groupId>
     <artifactId>meta-common-redis</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>meta-common-redis</name>

@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.java.auth.common.kafka</groupId>
+    <groupId>com.java.meta.common.kafka</groupId>
     <artifactId>meta-common-kafka</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>meta-common-kafka</name>

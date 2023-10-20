@@ -1,4 +1,4 @@
-package com.java.meta.sys.authsystemserver;
+package com.java.meta.sys;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

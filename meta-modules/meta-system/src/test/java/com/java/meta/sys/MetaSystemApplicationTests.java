@@ -1,4 +1,4 @@
-package com.java.meta.sys.authsystemserver;
+package com.java.meta.sys;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -8,7 +8,7 @@
     <artifactId>meta-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.java.auth.component.log</groupId>
+  <groupId>com.java.meta.component.log</groupId>
   <artifactId>meta-component-log-manager</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>meta-component-log-manager</name>

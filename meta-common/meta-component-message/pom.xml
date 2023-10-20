@@ -7,7 +7,7 @@
         <artifactId>meta-common</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.java.auth.component.message</groupId>
+    <groupId>com.java.meta.component.message</groupId>
     <artifactId>meta-component-message</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>meta-component-message</name>

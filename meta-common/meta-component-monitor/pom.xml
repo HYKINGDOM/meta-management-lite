@@ -7,7 +7,7 @@
 		<artifactId>meta-common</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.java.auth.component.monitor</groupId>
+	<groupId>com.java.meta.component.monitor</groupId>
 	<artifactId>meta-component-monitor</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>meta-component-monitor</name>

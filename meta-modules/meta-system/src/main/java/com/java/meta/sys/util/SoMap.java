@@ -1,4 +1,4 @@
-package com.java.meta.sys.authsystemserver.util;
+package com.java.meta.sys.util;
 
 
 import java.lang.reflect.Field;

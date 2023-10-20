@@ -1,10 +1,10 @@
-package com.java.meta.sys.authsystemserver.controller;
+package com.java.meta.sys.controller;
 
 
 import cn.dev33.satoken.stp.StpUtil;
 import cn.dev33.satoken.util.SaResult;
 import com.ejlchina.okhttps.OkHttps;
-import com.java.meta.sys.authsystemserver.util.SoMap;
+import com.java.meta.sys.util.SoMap;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
