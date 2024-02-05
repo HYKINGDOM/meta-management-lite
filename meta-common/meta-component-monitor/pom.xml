@@ -13,7 +13,7 @@
 	<name>meta-component-monitor</name>
 	<description>meta-component-monitor</description>
 	<properties>
-		<java.version>${java.version}</java.version>
+		<java.version>21</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

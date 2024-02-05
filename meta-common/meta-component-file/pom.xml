@@ -13,7 +13,7 @@
     <name>meta-component-file</name>
     <description>meta-component-file</description>
     <properties>
-        <java.version>${java.version}</java.version>
+        <java.version>21</java.version>
     </properties>
     <dependencies>
         <dependency>
