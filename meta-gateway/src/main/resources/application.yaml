@@ -13,23 +13,23 @@ spring:
           enabled: true
       routes:
         # 认证中心
-        -   id: auth-center
-            uri: lb://auth-center
-            predicates:
-              - Path=/auth/**
-            filters:
-              # 验证码处理
-              - CacheRequest
-              - ImgCodeFilter
-              - StripPrefix=1
+        - id: auth-center
+          uri: lb://auth-center
+          predicates:
+            - Path=/auth/**
+          filters:
+            # 验证码处理
+            - CacheRequest
+            - ImgCodeFilter
+            - StripPrefix=1
         #system 模块
-        -   id: auth-system
-            uri: lb://auth-system
-            predicates:
-              - Path=/system/**
-            filters:
-              # 限流配置
-              - StripPrefix=1
+        - id: auth-system
+          uri: lb://auth-system
+          predicates:
+            - Path=/system/**
+          filters:
+            # 限流配置
+            - StripPrefix=1
 
 
 
@@ -39,5 +39,5 @@ eureka:
     service-url:
       defaultZone: http://localhost:8001/eureka
   instance:
-    instance-id:  ${spring.application.name}:${server.port}
+    instance-id: ${spring.application.name}:${server.port}
     prefer-ip-address: true     #访问路径可以显示IP地址

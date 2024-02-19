@@ -1,6 +1,5 @@
 package com.java.meta.sys.controller;
 
-
 import cn.dev33.satoken.stp.StpUtil;
 import cn.dev33.satoken.util.SaResult;
 import com.ejlchina.okhttps.OkHttps;
@@ -35,14 +34,9 @@ public class SaOAuthClientController {
     @RequestMapping("/codeLogin")
     public SaResult codeLogin(String code) {
         // 调用Server端接口，获取 Access-Token 以及其他信息
-        String str = OkHttps.sync(serverUrl + "/oauth2/token")
-                .addBodyPara("grant_type", "authorization_code")
-                .addBodyPara("code", code)
-                .addBodyPara("client_id", clientId)
-                .addBodyPara("client_secret", clientSecret)
-                .post()
-                .getBody()
-                .toString();
+        String str = OkHttps.sync(serverUrl + "/oauth2/token").addBodyPara("grant_type", "authorization_code")
+            .addBodyPara("code", code).addBodyPara("client_id", clientId).addBodyPara("client_secret", clientSecret)
+            .post().getBody().toString();
         SoMap so = SoMap.getSoMap().setJsonString(str);
         System.out.println("返回结果: " + so);
 
@@ -65,14 +59,9 @@ public class SaOAuthClientController {
     @RequestMapping("/refresh")
     public SaResult refresh(String refreshToken) {
         // 调用Server端接口，通过 Refresh-Token 刷新出一个新的 Access-Token
-        String str = OkHttps.sync(serverUrl + "/oauth2/refresh")
-                .addBodyPara("grant_type", "refresh_token")
-                .addBodyPara("client_id", clientId)
-                .addBodyPara("client_secret", clientSecret)
-                .addBodyPara("refresh_token", refreshToken)
-                .post()
-                .getBody()
-                .toString();
+        String str = OkHttps.sync(serverUrl + "/oauth2/refresh").addBodyPara("grant_type", "refresh_token")
+            .addBodyPara("client_id", clientId).addBodyPara("client_secret", clientSecret)
+            .addBodyPara("refresh_token", refreshToken).post().getBody().toString();
         SoMap so = SoMap.getSoMap().setJsonString(str);
         System.out.println("返回结果: " + so);
 
@@ -90,15 +79,9 @@ public class SaOAuthClientController {
     @RequestMapping("/passwordLogin")
     public SaResult passwordLogin(String username, String password) {
         // 模式三：密码式-授权登录
-        String str = OkHttps.sync(serverUrl + "/oauth2/token")
-                .addBodyPara("grant_type", "password")
-                .addBodyPara("client_id", clientId)
-                .addBodyPara("client_secret", clientSecret)
-                .addBodyPara("username", username)
-                .addBodyPara("password", password)
-                .post()
-                .getBody()
-                .toString();
+        String str = OkHttps.sync(serverUrl + "/oauth2/token").addBodyPara("grant_type", "password")
+            .addBodyPara("client_id", clientId).addBodyPara("client_secret", clientSecret)
+            .addBodyPara("username", username).addBodyPara("password", password).post().getBody().toString();
         SoMap so = SoMap.getSoMap().setJsonString(str);
         System.out.println("返回结果: " + so);
 
@@ -121,13 +104,8 @@ public class SaOAuthClientController {
     @RequestMapping("/clientToken")
     public SaResult clientToken() {
         // 调用Server端接口
-        String str = OkHttps.sync(serverUrl + "/oauth2/client_token")
-                .addBodyPara("grant_type", "client_credentials")
-                .addBodyPara("client_id", clientId)
-                .addBodyPara("client_secret", clientSecret)
-                .post()
-                .getBody()
-                .toString();
+        String str = OkHttps.sync(serverUrl + "/oauth2/client_token").addBodyPara("grant_type", "client_credentials")
+            .addBodyPara("client_id", clientId).addBodyPara("client_secret", clientSecret).post().getBody().toString();
         SoMap so = SoMap.getSoMap().setJsonString(str);
         System.out.println("返回结果: " + so);
 
@@ -152,10 +130,8 @@ public class SaOAuthClientController {
     @RequestMapping("/getUserinfo")
     public SaResult getUserinfo(String accessToken) {
         // 调用Server端接口，查询开放的资源
-        String str = OkHttps.sync(serverUrl + "/oauth2/userinfo")
-                .addBodyPara("access_token", accessToken)
-                .post()
-                .getBody()
+        String str =
+            OkHttps.sync(serverUrl + "/oauth2/userinfo").addBodyPara("access_token", accessToken).post().getBody()
                 .toString();
         SoMap so = SoMap.getSoMap().setJsonString(str);
         System.out.println("返回结果: " + so);
@@ -176,7 +152,6 @@ public class SaOAuthClientController {
         e.printStackTrace();
         return SaResult.error(e.getMessage());
     }
-
 
     // ------------ 模拟方法 ------------------
     // 模拟方法：根据openid获取userId

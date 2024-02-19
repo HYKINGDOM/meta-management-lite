@@ -1,27 +1,24 @@
 package com.java.meta.controller;
 
-
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
-
 import cn.dev33.satoken.context.SaHolder;
 import cn.dev33.satoken.oauth2.config.SaOAuth2Config;
 import cn.dev33.satoken.oauth2.logic.SaOAuth2Handle;
 import cn.dev33.satoken.oauth2.logic.SaOAuth2Util;
 import cn.dev33.satoken.stp.StpUtil;
 import cn.dev33.satoken.util.SaResult;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Sa-OAuth2 Server端 控制器
- * @author click33
  *
+ * @author click33
  */
 @RestController
 public class SaOAuth2ServerController {
@@ -37,26 +34,25 @@ public class SaOAuth2ServerController {
     @Autowired
     public void setSaOAuth2Config(SaOAuth2Config cfg) {
         cfg.
-                // 未登录的视图
-                        setNotLoginView(()->{
-                    return new ModelAndView("login.html");
-                }).
-                // 登录处理函数
-                        setDoLoginHandle((name, pwd) -> {
-                    if("sa".equals(name) && "123456".equals(pwd)) {
-                        StpUtil.login(10001);
-                        return SaResult.ok();
-                    }
-                    return SaResult.error("账号名或密码错误");
-                }).
-                // 授权确认视图
-                        setConfirmView((clientId, scope)->{
-                    Map<String, Object> map = new HashMap<>();
-                    map.put("clientId", clientId);
-                    map.put("scope", scope);
-                    return new ModelAndView("confirm.html", map);
-                })
-        ;
+            // 未登录的视图
+                setNotLoginView(() -> {
+                return new ModelAndView("login.html");
+            }).
+            // 登录处理函数
+                setDoLoginHandle((name, pwd) -> {
+                if ("sa".equals(name) && "123456".equals(pwd)) {
+                    StpUtil.login(10001);
+                    return SaResult.ok();
+                }
+                return SaResult.error("账号名或密码错误");
+            }).
+            // 授权确认视图
+                setConfirmView((clientId, scope) -> {
+                Map<String, Object> map = new HashMap<>();
+                map.put("clientId", clientId);
+                map.put("scope", scope);
+                return new ModelAndView("confirm.html", map);
+            });
     }
 
     // 全局异常拦截
@@ -65,7 +61,6 @@ public class SaOAuth2ServerController {
         e.printStackTrace();
         return SaResult.error(e.getMessage());
     }
-
 
     // ---------- 开放相关资源接口： Client端根据 Access-Token ，置换相关资源 ------------
 

@@ -88,7 +88,6 @@
                 <version>${mybatis-flex.version}</version>
             </dependency>
 
-
             <dependency>
                 <groupId>com.mybatis-flex</groupId>
                 <artifactId>mybatis-flex-processor</artifactId>
@@ -170,12 +169,6 @@
             <dependency>
                 <groupId>cn.dev33</groupId>
                 <artifactId>sa-token-oauth2</artifactId>
-                <version>${sa.token.vertion}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>cn.dev33</groupId>
-                <artifactId>sa-token-spring-boot-starter</artifactId>
                 <version>${sa.token.vertion}</version>
             </dependency>
 
