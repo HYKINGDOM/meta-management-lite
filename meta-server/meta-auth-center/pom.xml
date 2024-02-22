@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.java.meta</groupId>
-        <artifactId>meta-management-lite</artifactId>
+        <groupId>com.java.meta.server</groupId>
+        <artifactId>meta-server</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 

@@ -9,7 +9,7 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.java.meta</groupId>
+  <groupId>com.java.meta.modules</groupId>
   <artifactId>meta-modules</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>meta-modules</name>
@@ -23,7 +23,8 @@
   </properties>
 
   <modules>
-    <module>meta-system</module>
+    <module>meta-eureka</module>
+    <module>meta-monitor</module>
   </modules>
 
 

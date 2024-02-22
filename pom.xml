@@ -42,11 +42,9 @@
 
 
     <modules>
-        <module>meta-auth-center</module>
         <module>meta-modules</module>
-        <module>meta-eureka</module>
-        <module>meta-gateway</module>
         <module>meta-common</module>
+        <module>meta-server</module>
     </modules>
 
 
@@ -218,7 +216,6 @@
 
         </dependencies>
     </dependencyManagement>
-
 
 
     <build>
